@@ -30,3 +30,14 @@ White: hsl(0, 0%, 100%)
 
 - Family: [Spartan](https://fonts.google.com/specimen/Spartan)
 - Weights: 400, 500, 700
+
+
+
+ Anne Wallace Verified Buyer 
+
+
+    
+    <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
