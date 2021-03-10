@@ -5,6 +5,9 @@ $primary-color: hsl(300, 43%, 22%);
 $secondary-color: hsl(303, 10%, 53%);
 $media600: 600px;
 $media768: 768px;
+$media860: 860px;
+$media992: 992px;
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,6 +17,7 @@ $media768: 768px;
 body {
     width: 100vw;
     height: auto;
+    overflow-x: hidden;
     background: url("../images/bg-pattern-top-mobile.svg") top left no-repeat,
         url("../images/bg-pattern-bottom-mobile.svg") bottom right no-repeat;
     p {
@@ -38,11 +42,8 @@ main {
     grid-template-areas: "card-introduction" "card-reviews" "card-comments";
     grid-template-columns: 100%;
     grid-template-rows: 250px 250px 850px;
-    margin-top: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    
+
 
     @media (min-width: $media600) {
         grid-template-columns: 45% 45%;
@@ -54,8 +55,13 @@ main {
     @media (min-width: $media768) {
         grid-template-columns: 45% 55%;
         column-gap: normal;
-        grid-template-rows: 100vh 100vh;
+        grid-template-rows: 50vh 100vh;
     }
+    @media(min-width: $media992){
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 50vh 70vh;
+    }
+    
 }
 
 .card-introduction {
@@ -65,11 +71,20 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
 
-.card-introduction p,
-h1 {
-    text-align: center;
+    p, h1{
+        text-align: center;
+    }
+
+    @media(min-width: $media992){
+        h1, p{
+            text-align: left;
+        }   
+        
+        h1{
+            padding-right: 25%;
+        }
+    }
 }
 
 .card-reviews {
@@ -86,6 +101,9 @@ h1 {
     }
     @media (min-width: $media768) {
         justify-content: center;
+    }
+    @media(min-width: $media992){
+        align-items: center;
     }
 }
 
@@ -108,17 +126,31 @@ h1 {
         align-items: center;
         margin-bottom: 5%;
     }
+
+    @media (min-width: $media992) {
+        width: 70%;
+        height: 15%;
+        align-items: center;
+        margin-bottom: 2%;
+    }
 }  
 
 #report-guru{
     @media (min-width: $media768){
         margin-left: 5%;
     }
+    @media (min-width: $media992) {
+        margin-left: 10%;
+    }
 }
 
 #best-tech{
     @media (min-width: $media768){
         margin-left: 10%;
+    }
+    @media (min-width: $media992) {
+        margin-left: 20%;
+        
     }
 }
 
@@ -138,6 +170,9 @@ h1 {
         align-items: center;
         flex-direction: row;
     }
+    @media(min-width: $media992){
+        justify-content: space-between;
+    }
 }
 
 .card-comments__card {
@@ -149,10 +184,20 @@ h1 {
     justify-content: space-evenly;
     @media (min-width: $media600) {
         height: 400px;
-        width: 30%;
+        width: 32%;
     }
     @media (min-width: $media768){
         width: 30%;
+    }
+
+    @media (min-width: $media860) {
+        height: 75%;
+        
+    }
+
+    @media(min-width: $media992){
+        width: 32%;
+        justify-content: center;
     }
 
 }
@@ -162,7 +207,6 @@ h1 {
     img {
         border-radius: 50%;
         transform: scale(0.7);
-        margin: 0;
     }
 }
 
@@ -183,6 +227,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     p {
         margin: 0;
     }
@@ -190,11 +235,13 @@ h1 {
 .card-comments__card___infos____name {
     color: white;
     font-weight: 700;
+    
 }
 .card-comments__card___infos____perfil {
     color: hsl(333, 80%, 67%);
     font-weight: 400;
 }
+
 .card-comments__card__comment p {
     font-weight: 400;
     color: hsl(0, 0%, 100%);
