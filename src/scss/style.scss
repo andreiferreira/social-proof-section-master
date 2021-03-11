@@ -1,6 +1,6 @@
 @import url("https://fonts.google.com/specimen/Spartan");
 //first mobile
-$borda: 1px solid red;
+
 $primary-color: hsl(300, 43%, 22%);
 $secondary-color: hsl(303, 10%, 53%);
 $media600: 600px;
@@ -37,6 +37,7 @@ main {
     height: 90%;
 }
 
+ // all content
 .content {
     display: grid;
     grid-template-areas: "card-introduction" "card-reviews" "card-comments";
@@ -64,6 +65,7 @@ main {
     
 }
 
+//introduction text area
 .card-introduction {
     grid-area: card-introduction;
     grid-row: 1 / 2;
@@ -87,6 +89,7 @@ main {
     }
 }
 
+//reviews cards area
 .card-reviews {
     grid-area: card-reviews;
     grid-row: 2 / 3;
@@ -107,6 +110,7 @@ main {
     }
 }
 
+//each review card
 .card-reviews__review {
     height: 25%;
     display: flex;
@@ -134,7 +138,7 @@ main {
         margin-bottom: 2%;
     }
 }  
-
+// report guru review
 #report-guru{
     @media (min-width: $media768){
         margin-left: 5%;
@@ -143,7 +147,7 @@ main {
         margin-left: 10%;
     }
 }
-
+//best tech review
 #best-tech{
     @media (min-width: $media768){
         margin-left: 10%;
@@ -153,7 +157,7 @@ main {
         
     }
 }
-
+//comments card area
 .card-comments {
     grid-area: card-comments;
     grid-row: 3 / 4;
@@ -174,7 +178,7 @@ main {
         justify-content: space-between;
     }
 }
-
+//each comment card
 .card-comments__card {
     background-color: $primary-color;
     border-radius: 3%;
@@ -201,6 +205,7 @@ main {
     }
 
 }
+//each card comment profile photo 
 .card-comments__card___profile {
     display: flex;
     align-items: center;
@@ -209,19 +214,19 @@ main {
         transform: scale(0.7);
     }
 }
-
+//Colton comment
 #colton-comment{
     @media(min-width: $media768){
         margin-top: -50px;
     }
 }
-
+//Anne comment
 #anne-comment{
     @media(min-width: $media768){
         margin-top: 50px;
     }
 }
-
+// each card comment info (name and perfil)
 .card-comments__card___infos {
     display: flex;
     flex-direction: column;
@@ -247,4 +252,14 @@ main {
     color: hsl(0, 0%, 100%);
     margin: 0px 10px 0 10px;
     word-spacing: 0.2em;
+}
+//footer
+.attribution {
+    font-size: 13px;
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+    a{
+        color: hsl(228, 45%, 44%);
+    }
 }
